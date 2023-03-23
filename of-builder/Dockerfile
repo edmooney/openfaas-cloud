@@ -17,7 +17,7 @@ ADD vendor      vendor
 
 RUN go build -o /usr/bin/of-builder .
 
-FROM alpine:3.12
+FROM alpine:3.16
 RUN apk add --no-cache ca-certificates
 
 # Setting the group prevented access to /tmp at runtime
