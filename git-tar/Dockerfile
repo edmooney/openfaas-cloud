@@ -19,7 +19,7 @@ RUN CGO_ENABLED=0 GOOS=linux \
     go build --ldflags "-s -w" -a -installsuffix cgo -o handler . && \
     go test $(go list ./... | grep -v /vendor/) -cover
 
-FROM alpine:3.11 as ship
+FROM alpine:3.21.0 as ship
 
 RUN apk --no-cache add \
     ca-certificates \
